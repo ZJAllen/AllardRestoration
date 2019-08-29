@@ -1,6 +1,8 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #505050;
+  min-height: 75rem;
+  padding-top: 5rem;
 }
 
 img {
@@ -12,7 +14,7 @@ img {
 }
 
 img .banner-image {
-  height: 500px:
+  height: 50px;
 }
 
 a:link {
