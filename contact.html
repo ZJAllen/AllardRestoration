@@ -46,30 +46,49 @@
       </div>
     </nav>
 
-    <form class="form-signin">
-      <div class="text-center mb-4">
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
-        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
-      </div>
+    <!--
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/YOUR_EMAIL_HERE" method="post">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  -->
 
-      <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputEmail">Email address</label>
-      </div>
+    <form class="form-signin" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/theallardrestoration@gmail.com" method="post">
+      <fieldset id="fs-frm-inputs">
+        <div class="text-center mb-4">
+          <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+          <h1 class="h3 mb-3 font-weight-normal">Contact Me!</h1>
+        </div>
 
-      <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <label for="inputPassword">Password</label>
-      </div>
+        <div class="form-label-group">
+          <input class="form-control" type="text" name="name" id="full-name" placeholder="First and Last" required autofocus>
+          <label for="full-name">First and Last Name</label>
+        </div>
 
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+        <div class="form-label-group">
+          <input class="form-control" type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required autofocus>
+          <label for="email-address">Email Address</label>
+        </div>
+
+        <div class="form-label-group">
+          <textarea class="form-control" rows="5" name="message" id="message" placeholder="Enter Message" required autofocus></textarea>
+          <label for="message">Message</label>
+          <!--input type="message" id="inputPassword" class="form-control" placeholder="Password" required-->
+        </div>
+
+        <!--input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"-->
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit">Submit</button>
+        <p class="mt-5 mb-3 text-muted text-center">&copy;The Allard Restoration 2019</p>
+      </fieldset>
     </form>
 
 
