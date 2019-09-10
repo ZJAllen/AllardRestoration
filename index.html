@@ -54,65 +54,65 @@
 
       <p class="page-description text-left ">Restoration Progress</p>
 
-      <div class="gallery">
+      <!-- Grid row -->
+      <div class="row">
 
-        <div class="row mb-3">
+        <!-- Grid column -->
+        <div class="col-md-12 d-flex justify-content-center mb-5">
 
-          <div class="col-md-4">
-            <div class="card">
-              <a class="lightbox" href="img/allard-side-profile.JPG">
-                <img src="img/allard-side-profile.JPG" alt="Park" class="card-img-top">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <a class="lightbox" href="img/allard-side-profile.JPG">
-                <img src="img/allard-side-profile.JPG" alt="Park" class="card-img-top">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <a class="lightbox" href="img/allard-side-profile.JPG">
-                <img src="img/allard-side-profile.JPG" alt="Park" class="card-img-top">
-              </a>
-            </div>
-          </div>
+          <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+          <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="1">Mountains</button>
+          <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Sea</button>
 
         </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="card">
-              <a class="lightbox" href="img/allard-side-profile.JPG">
-                <img src="img/allard-side-profile.JPG" alt="Park" class="card-img-top">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <a class="lightbox" href="img/allard-side-profile.JPG">
-                <img src="img/allard-side-profile.JPG" alt="Park" class="card-img-top">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <a class="lightbox" href="img/allard-side-profile.JPG">
-                <img src="img/allard-side-profile.JPG" alt="Park" class="card-img-top">
-              </a>
-            </div>
-          </div>
-
-        </div>
+        <!-- Grid column -->
 
       </div>
+      <!-- Grid row -->
+
+      <!-- Grid row -->
+      <div class="gallery" id="gallery">
+
+        <!-- Grid column -->
+        <div class="mb-3 pics animation all 2">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="mb-3 pics animation all 1">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="mb-3 pics animation all 1">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="mb-3 pics animation all 2">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="mb-3 pics animation all 2">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="mb-3 pics animation all 1">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+
 
     </div>
 
@@ -127,5 +127,21 @@
     <script>
       baguetteBox.run('.gallery');
     </script>
+
+    <script>
+    $(function() {
+      var selectedClass = "";
+      $(".filter").click(function(){
+          selectedClass = $(this).attr("data-rel");
+          $("#gallery").fadeTo(100, 0.1);
+          $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+          setTimeout(function() {
+            $("."+selectedClass).fadeIn().addClass('animation');
+            $("#gallery").fadeTo(300, 1);
+          }, 300);
+      });
+    });
+    </script>
+
   </body>
 </html>
