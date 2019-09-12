@@ -92,6 +92,8 @@ a:hover {
   }
 }
 
+
+
 .my-gallery {
   width: 100%;
   float: left;
@@ -103,4 +105,8 @@ a:hover {
 
 .my-gallery figcaption {
   display: none;
+}
+
+.pswp__caption__center {
+  max-width: 700px;
 }
